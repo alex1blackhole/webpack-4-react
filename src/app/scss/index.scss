@@ -1,0 +1,31 @@
+@import "normalize";
+@import "header";
+
+
+.store {
+    border: 1px solid black;
+    width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+
+    &__flex {
+        display: flex;
+    }
+
+    button {
+        margin-right: 10px;
+        width: 170px;
+        height: 40px;
+        border-radius: 5px;
+        background: orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 32px;
+        color: black;
+    }
+}
