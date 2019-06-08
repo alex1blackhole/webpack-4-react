@@ -1,4 +1,4 @@
-import {BOOKS_ADD,BOOKS_DEC,BOOKS_FAKE} from "../const";
+import {BOOKS_ADD, BOOKS_DEC, BOOKS_FAKE} from "../const";
 
 const initialState = {
     books: 1

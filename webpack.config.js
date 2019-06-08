@@ -21,42 +21,21 @@ module.exports = {
                     }
                 ]
             },
-
-            {
-                test: /\.scss$/,
-                use:[
-                    'style-loader',
-                    MiniCssExtractPlugin.loader,
-                    {
-                        loader: "css-loader",
-                        options: {sourceMap:true}
-                    },
-                    {
-                        loader: "postcss-loader",
-                        options: {sourceMap:true , config:{path: 'src/app/js/postcss.config.js' } }
-                    },
-                    {
-                        loader: "sass-loader",
-                        options: {sourceMap:true}
-                    },
-                ]
-            },
-
             {
                 test: /\.css$/,
-                use:[
-                    'style-loader',
-                    MiniCssExtractPlugin.loader,
+                use: [
+                    { loader: 'style-loader' },
                     {
-                        loader: "css-loader",
-                        options: {sourceMap:true}
+                        loader: 'css-loader',
+                        options: {
+                            importLoaders: 1,
+                            modules: true,
+                            localIdentName: '[name]__[local]___[hash:base64:5]',
+                        },
                     },
-                    {
-                        loader: "postcss-loader",
-                        options: {sourceMap:true , config:{path: 'src/app/js/postcss.config.js' } }
-                    },
-                ]
-            },
+                    { loader: 'postcss-loader' }
+                ],
+            }
         ]
     },
     devServer: {

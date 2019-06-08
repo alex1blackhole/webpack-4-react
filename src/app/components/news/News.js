@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {booksAdd} from "../../redux/actions";
+import style from './style.css';
 
 class News extends Component {
 
     render() {
         return (
-            <div>
+            <div className={style.news}>
                 Title for news component
 
                 <div className="store">
