@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component,Fragment} from 'react';
 import {Route, Switch, } from 'react-router-dom';
 import News from "./news/News";
 import Request from "./request/Request";

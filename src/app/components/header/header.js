@@ -3,6 +3,9 @@ import {NavLink} from "react-router-dom";
 
 class Header extends Component {
     render() {
+
+        const test = '';
+
         return (
             <div className='header'>
                 <div className="header__inner">
